@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&family=Inter:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0B0E14; --bg2:#0C1920; --teal:#64FFF9; --ink:#EDF2F5; --mute:#9AA9B4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { width:var(--w); height:var(--h); }
+  body {
+    font-family:'Heebo',sans-serif; color:var(--ink); overflow:hidden;
+    background:
+      radial-gradient(ellipse 70% 55% at 85% 10%, rgba(100,255,249,.16), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 0% 100%, rgba(100,255,249,.10), transparent 60%),
+      linear-gradient(160deg, var(--bg2), var(--bg) 55%);
+    position:relative;
+  }
+  .grid { position:absolute; inset:0; opacity:.07;
+    background-image:linear-gradient(var(--teal) 1px,transparent 1px),linear-gradient(90deg,var(--teal) 1px,transparent 1px);
+    background-size:48px 48px; mask-image:radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%); }
+  svg.waves { position:absolute; left:0; width:100%; }
+  .wrap { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; padding:var(--pad); }
+  .tag { align-self:flex-start; font-weight:700; font-size:calc(var(--s)*22px); color:var(--bg);
+    background:var(--teal); padding:.3em .9em; border-radius:999px; letter-spacing:.01em; }
+  .tag span { font-family:'Inter'; }
+  .kicker { margin-top:calc(var(--s)*34px); font-size:calc(var(--s)*30px); font-weight:500; color:var(--mute); }
+  h1 { font-family:'Inter',sans-serif; font-weight:800; direction:ltr; text-align:right;
+    font-size:calc(var(--s)*118px); line-height:1; letter-spacing:-.03em; margin-top:calc(var(--s)*8px); }
+  h1 em { font-style:normal; color:var(--teal); }
+  .sub { font-size:calc(var(--s)*44px); font-weight:800; line-height:1.2; margin-top:calc(var(--s)*18px); max-width:22em; }
+  .chips { display:grid; grid-template-columns:repeat(var(--cols),1fr); gap:calc(var(--s)*14px); margin-top:calc(var(--s)*40px); }
+  .chip { background:rgba(237,242,245,.05); border:1px solid rgba(100,255,249,.25); border-radius:calc(var(--s)*18px);
+    padding:calc(var(--s)*18px) calc(var(--s)*22px); font-size:calc(var(--s)*25px); font-weight:500; line-height:1.3; }
+  .chip b { display:block; color:var(--teal); font-weight:800; font-size:calc(var(--s)*27px); margin-bottom:2px; }
+  .spacer { flex:1; }
+  .bet { display:var(--bet,none); margin-top:calc(var(--s)*44px); border-right:4px solid var(--teal); padding-right:24px; }
+  .bet-k { color:var(--teal); font-weight:700; font-size:26px; }
+  .bet-t { font-size:34px; font-weight:700; line-height:1.35; margin-top:6px; }
+  .ltr { direction:ltr; unicode-bidi:isolate; }
+  .foot { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; }
+  .note { font-size:calc(var(--s)*24px); color:var(--ink); line-height:1.45; }
+  .note .hl { color:var(--teal); font-weight:800; }
+  .note .ltr { direction:ltr; unicode-bidi:isolate; }
+  .logo { height:calc(var(--s)*64px); }
+</style>
+</head>
+<body>
+<div class="grid"></div>
+<svg class="waves" viewBox="0 0 1200 300" preserveAspectRatio="none" style="top:var(--wave-top);height:var(--wave-h)">
+  <path d="M0,150 C200,40 400,260 600,150 S1000,40 1200,150" fill="none" stroke="#64FFF9" stroke-width="3" opacity=".55"/>
+  <path d="M0,150 C200,260 400,40 600,150 S1000,260 1200,150" fill="none" stroke="#EDF2F5" stroke-width="3" opacity=".35"/>
+  <path d="M0,150 C200,60 400,240 600,150 S1000,60 1200,150" fill="none" stroke="#64FFF9" stroke-width="1" opacity=".25"/>
+</svg>
+<div class="wrap">
+  <div class="tag">חדש מבית <span>Anthropic</span></div>
+  <div class="kicker">הסוכן האישי שעובד בשבילכם ברקע</div>
+  <h1>Claude <em>Duet</em></h1>
+  <div class="sub">לא רק עונה. יוזם, מתאם ומבצע.</div>
+  <div class="chips">
+    <div class="chip"><b>חיבור עמוק</b>מייל, יומן ואפליקציות</div>
+    <div class="chip"><b>זוכר אתכם</b>לומד העדפות לאורך זמן</div>
+    <div class="chip"><b>יוזמה אקטיבית</b>מזהה התנגשויות ותשלומים פתוחים</div>
+    <div class="chip"><b>ביצוע מלא</b>בונה דשבורדים ואפליקציות</div>
+  </div>
+  <div class="bet">
+    <div class="bet-k">הזווית של <span class="ltr">AniCCAI</span></div>
+    <div class="bet-t">אם צריך להמר מי תוביל את שוק הסוכנים האישיים בעוד שנה־שנתיים, ההימור שלנו על <span class="ltr">Anthropic</span>.</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="foot">
+    <div class="note">
+      <span class="hl">כלול במנוי <span class="ltr">Pro / Max</span></span> ללא תוספת תשלום<br>
+      גרסת מחקר בארה״ב · רשימת ההמתנה כבר פתוחה
+    </div>
+    <img class="logo" src="logo_t.png" alt="Aniccai">
+  </div>
+</div>
+</body>
+</html>
